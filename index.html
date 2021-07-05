@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>My family book</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <marquee onmouseover = "this.stop()" onmouseout="this.start()"></marquee>Hint(Check console)</marquee>
+        <h1 style="font-family:italic;">My family book</h1>
+        <img src="https://images.unsplash.com/photo-1552256469-acf9fd4feb50?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80" 
+        style="margin-top: 20px; margin-bottom:20px; width:30%; height:70%;" id="family_image">
+        <h4 id="name" style="margin-bottom:20px;">XYZ</h4>
+        <button onclick="update()">Next</button>
+    </body>
+    <script>
+        var names = ["XGH", "JHK", "KLJ", "YOW", "XYZ"]
+        var images = ["https://images.unsplash.com/photo-1576674498722-f4a79fc3f50a?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDR8dG93SlpGc2twR2d8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60", "https://images.unsplash.com/photo-1625259357101-bf3ce321e3d0?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE2fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
+    "https://images.unsplash.com/photo-1625124670770-7d8129eccd1c?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60", "https://images.unsplash.com/photo-1608613520463-d6115b7feb06?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDExfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60", 
+"https://images.unsplash.com/photo-1552256469-acf9fd4feb50?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=633&q=80"]   
+  
+var i = 0;
+function update(){
+i++;
+var family_number = 4;
+if (i > family_number){
+    i = 0;
+}
+var updatedimg = images[i];
+var updatedname = names[i];
+console.log("updatedname");
+document.getElementById("family_image").src=images[i];
+document.getElementById("name").innerHTML=names[i];
+}
+    </script>
+</html>
